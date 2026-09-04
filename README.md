@@ -9,13 +9,6 @@ The application implements the **1Fi Shop Page** with 3 section tabs matching th
 
 ---
 
-### 📝 Submission Information
-- **Submission Form**: [https://forms.gle/WZYqNEAJZPXonLk88](https://forms.gle/WZYqNEAJZPXonLk88)
-- **Deadline**: 8th September 2026
-
-
----
-
 ## 🌟 Key Features
 
 1. **Dynamic Database & API Architecture**:
@@ -47,7 +40,6 @@ The application implements the **1Fi Shop Page** with 3 section tabs matching th
 ## 🚀 Quick Setup & Run Instructions
 
 ### Option 1: One-Click Run (Windows Batch File)
-Double-click [run.bat](file:///c:/Users/lakshay/OneDrive%20-%20Chandigarh%20University/Documents/1Fi%20Assignment/run.bat) in the project root. It will automatically:
 1. Install dependencies (`npm install`)
 2. Push database schema & seed products (`npx prisma db push && npx tsx prisma/seed.ts`)
 3. Launch local dev server and open `http://localhost:3005/products/iphone-17-pro` in your browser.
