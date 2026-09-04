@@ -256,11 +256,13 @@ curl -X POST http://localhost:3005/api/orders \
 
 ---
 
-## 🌐 Deployment
+## 🌐 Live Deployment Guide (Render)
 
-This repository is pre-configured for instant deployment on **Vercel** or **Render**.
+This repository includes a pre-configured [`render.yaml`](file:///c:/Users/lakshay/OneDrive%20-%20Chandigarh%20University/Documents/1Fi%20Assignment/render.yaml) Blueprint file for automated deployment on **Render**.
 
-```bash
-npm run build
-npm start
-```
+### Steps to Deploy on Render:
+1. Go to **[dashboard.render.com](https://dashboard.render.com)**.
+2. Click **New +** → Select **Blueprint**.
+3. Connect your GitHub repository **`Lakshay093/1Fi-Assignment`**.
+4. Render will automatically detect `render.yaml`, set up Node.js, run database migrations, seed data, and generate your live HTTPS deployment link!
+
