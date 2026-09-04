@@ -258,12 +258,19 @@ curl -X POST http://localhost:3005/api/orders \
 
 ## 🌐 Live Deployment Guide
 
-This repository is pre-configured for instant deployment on **Vercel** and **Render**.
+This repository is pre-configured for instant 1-click deployment on **Railway**, **Vercel**, and **Render**.
 
-### Option A: Deploy on Vercel (Recommended)
+### Option A: Deploy on Railway (Recommended for Full-Stack + DB)
+1. Go to **[railway.app](https://railway.app)**.
+2. Click **New Project** → Select **Deploy from GitHub repo**.
+3. Choose your repository **`Lakshay093/1Fi-Assignment`**.
+4. Railway will automatically detect `railway.json`, run Nixpacks build, initialize the SQLite database, seed all 3 products, and generate your live HTTPS deployment domain!
+
+### Option B: Deploy on Vercel
 1. Go to **[vercel.com/new](https://vercel.com/new)**.
 2. Import your GitHub repository **`Lakshay093/1Fi-Assignment`**.
-3. Click **Deploy**. Vercel will automatically run the build, seed the database, and generate your live HTTPS URL!
+3. Click **Deploy**.
+
 
 ### Option B: Deploy on Render
 1. Go to **[dashboard.render.com](https://dashboard.render.com)**.
