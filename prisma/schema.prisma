@@ -1,0 +1,66 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Product {
+  id          String    @id @default(uuid())
+  slug        String    @unique
+  name        String
+  brand       String
+  subtitle    String?
+  description String
+  rating      Float     @default(4.8)
+  reviewCount Int       @default(124)
+  isNew       Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  variants    Variant[]
+  emiPlans    EmiPlan[]
+}
+
+model Variant {
+  id        String   @id @default(uuid())
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  title     String
+  color     String
+  colorHex  String
+  storage   String
+  price     Int
+  mrp       Int
+  image     String
+  inStock   Boolean  @default(true)
+  sku       String   @unique
+  createdAt DateTime @default(now())
+}
+
+model EmiPlan {
+  id             String   @id @default(uuid())
+  productId      String
+  product        Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  tenureMonths   Int
+  interestRate   Float
+  cashbackAmount Int      @default(0)
+  isZeroInterest Boolean  @default(false)
+  isPopular      Boolean  @default(false)
+  createdAt      DateTime @default(now())
+}
+
+model Order {
+  id            String   @id @default(uuid())
+  productName   String
+  variantTitle  String
+  tenureMonths  Int
+  monthlyAmount Int
+  interestRate  Float
+  totalAmount   Int
+  customerName  String
+  customerEmail String
+  status        String   @default("APPROVED")
+  createdAt     DateTime @default(now())
+}
