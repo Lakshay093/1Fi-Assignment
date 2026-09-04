@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
+import { prisma } from '../../../lib/prisma';
 
 // GET /api/orders - Fetch all placed EMI orders from database
 export async function GET() {

@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Product, Variant, EmiPlan } from '@/lib/types';
-import { formatINR } from '@/lib/emi';
+import { Product, Variant, EmiPlan } from '../lib/types';
+import { formatINR } from '../lib/emi';
 import { X, CheckCircle2, ShieldCheck, Loader2, Sparkles } from 'lucide-react';
 
 interface CheckoutModalProps {

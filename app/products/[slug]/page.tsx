@@ -1,6 +1,6 @@
-import { prisma } from '@/lib/prisma';
-import ProductDetailClient from '@/components/ProductDetailClient';
-import { Product } from '@/lib/types';
+import { prisma } from '../../../lib/prisma';
+import ProductDetailClient from '../../../components/ProductDetailClient';
+import { Product } from '../../../lib/types';
 import { notFound } from 'next/navigation';
 
 export const dynamic = 'force-dynamic';

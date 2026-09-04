@@ -1,10 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { Product } from '@/lib/types';
-import ProductCard from '@/components/ProductCard';
-import HeroBanner from '@/components/HeroBanner';
-import MutualFundBanner from '@/components/MutualFundBanner';
+import { Product } from '../lib/types';
+import ProductCard from './ProductCard';
+import HeroBanner from './HeroBanner';
+import MutualFundBanner from './MutualFundBanner';
 import { Search, Store, Award, ArrowRight, Database } from 'lucide-react';
 import Link from 'next/link';
 

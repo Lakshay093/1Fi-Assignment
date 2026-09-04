@@ -1,12 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import { Product, Variant, EmiPlan } from '@/lib/types';
-import { calculateEmiDetails, formatINR } from '@/lib/emi';
-import EMIPlanItem from '@/components/EMIPlanItem';
-import CheckoutModal from '@/components/CheckoutModal';
-import MutualFundBanner from '@/components/MutualFundBanner';
-import { Star, ShieldCheck, ArrowLeft, Check, Sparkles, AlertCircle } from 'lucide-react';
+import { Product, Variant, EmiPlan } from '../lib/types';
+import { calculateEmiDetails, formatINR } from '../lib/emi';
+import EMIPlanItem from './EMIPlanItem';
+import CheckoutModal from './CheckoutModal';
+import MutualFundBanner from './MutualFundBanner';
+import { ShieldCheck, ArrowLeft, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 
 interface ProductDetailClientProps {
@@ -139,7 +139,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
           </div>
         </div>
 
-        {/* Right Column: Pricing & EMI Plans (Matches 1Fi PDF screenshot) */}
+        {/* Right Column: Pricing & EMI Plans */}
         <div className="lg:col-span-7 flex flex-col justify-between">
           <div>
             {/* Header: Price & Strikethrough MRP */}

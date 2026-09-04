@@ -1,6 +1,6 @@
-import { prisma } from '@/lib/prisma';
-import ShopPageContainer from '@/components/ShopPageContainer';
-import { Product } from '@/lib/types';
+import { prisma } from '../lib/prisma';
+import ShopPageContainer from '../components/ShopPageContainer';
+import { Product } from '../lib/types';
 
 export const dynamic = 'force-dynamic';
 

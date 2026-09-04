@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { Product } from '@/lib/types';
-import { calculateEmiDetails, formatINR } from '@/lib/emi';
+import { Product } from '../lib/types';
+import { calculateEmiDetails, formatINR } from '../lib/emi';
 import { Star, ShieldCheck, ArrowRight } from 'lucide-react';
 
 interface ProductCardProps {

@@ -1,7 +1,7 @@
 'use client';
 
-import { EmiPlan } from '@/lib/types';
-import { formatINR } from '@/lib/emi';
+import { EmiPlan } from '../lib/types';
+import { formatINR } from '../lib/emi';
 import { Check } from 'lucide-react';
 
 interface EMIPlanItemProps {
