@@ -39,12 +39,8 @@ export interface Product {
 }
 
 export interface OrderPayload {
-  productName: string;
-  variantTitle: string;
+  variantSku: string;
   tenureMonths: number;
-  monthlyAmount: number;
-  interestRate: number;
-  totalAmount: number;
   customerName: string;
   customerEmail: string;
 }

@@ -3,10 +3,10 @@ import { prisma } from '../../../../lib/prisma';
 
 export async function GET(
   request: Request,
-  { params }: { params: { slug: string } }
+  { params }: { params: Promise<{ slug: string }> }
 ) {
   try {
-    const { slug } = params;
+    const { slug } = await params;
 
     // Look up by slug OR by unique ID
     const product = await prisma.product.findFirst({
@@ -38,7 +38,7 @@ export async function GET(
       data: product,
     });
   } catch (error) {
-    console.error(`API /api/products/${params.slug} error:`, error);
+    console.error('API product details error:', error);
     return NextResponse.json(
       { success: false, error: 'Failed to fetch product details' },
       { status: 500 }

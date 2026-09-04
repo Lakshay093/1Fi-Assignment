@@ -5,10 +5,8 @@ const prisma = new PrismaClient();
 async function main() {
   console.log('Seeding database with 1Fi products & mutual-fund backed EMI plans...');
 
-  // Clean existing data
-  await prisma.order.deleteMany();
-  await prisma.emiPlan.deleteMany();
-  await prisma.variant.deleteMany();
+  // Product catalogue data is safe to refresh. Orders are deliberately retained.
+  // Variant and EMI-plan rows are removed through the Product relations' cascade.
   await prisma.product.deleteMany();
 
   // 1. iPhone 17 Pro

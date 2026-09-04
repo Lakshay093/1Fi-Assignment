@@ -39,12 +39,8 @@ export default function CheckoutModal({
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          productName: product.name,
-          variantTitle: `${selectedVariant.title} (${selectedVariant.color})`,
+          variantSku: selectedVariant.sku,
           tenureMonths: selectedPlan.tenureMonths,
-          monthlyAmount,
-          interestRate: selectedPlan.interestRate,
-          totalAmount: monthlyAmount * selectedPlan.tenureMonths,
           customerName,
           customerEmail,
         }),
