@@ -3,14 +3,10 @@ services:
     name: 1fi-assignment
     runtime: node
     plan: free
-    buildCommand: npm ci && npm run db:deploy && npm run db:seed && npm run build
+    buildCommand: npm install && npm run db:deploy && npm run db:seed && npm run build
     startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
-      - key: NODE_VERSION
-        value: 22
       - key: DATABASE_URL
-        # This project uses the existing Render PostgreSQL instance. Set its
-        # connection string in the Render service dashboard; never commit it.
-        sync: false
+        value: file:./dev.db
