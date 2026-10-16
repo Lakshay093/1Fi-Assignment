@@ -34,7 +34,7 @@ export default function RootLayout({
         <footer className="bg-white border-t border-gray-100 py-6 mt-16 text-xs text-gray-500 pb-24">
           <div className="max-w-7xl mx-auto px-4 flex justify-end">
             <div className="font-medium text-gray-600">
-              Made with 💜 by <span className="font-bold text-gray-900">Lakshay Dhiman</span>
+              Made with 💜 by <span className="font-bold text-gray-900">Saksham</span>
             </div>
           </div>
         </footer>

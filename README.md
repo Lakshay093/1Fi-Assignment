@@ -375,8 +375,8 @@ The **Top Brands** and **Nearby Stores** sections remain placeholders because th
 
 ## 👨‍💻 Author
 
-**Lakshay Dhiman**
+**Saksham**
 
-GitHub: https://github.com/Lakshay093
+GitHub: https://github.com/rjsaksham
 
 Repository: https://github.com/Lakshay093/1Fi-Assignment
